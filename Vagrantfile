@@ -12,6 +12,7 @@ Vagrant.configure('2') do |config|
   config.vm.network 'private_network', ip: '1.1.1.10'
   config.vm.network 'forwarded_port', guest: 27017, host: 27017
   config.vm.network 'forwarded_port', guest: 6379, host: 6379
+  config.vm.network 'forwarded_port', guest: 3306, host: 3406
   
   config.vm.provider 'virtualbox' do |virtualbox|
     virtualbox.name = 'databases'
@@ -25,6 +26,7 @@ Vagrant.configure('2') do |config|
   config.vm.provision 'shell', path: 'shell/tools-installation.sh'
   config.vm.provision 'shell', path: 'shell/mongodb-installation.sh'
   config.vm.provision 'shell', path: 'shell/redis-installation.sh'
+  config.vm.provision 'shell', path: 'shell/mysql-installation.sh'
 
   config.vm.provision 'shell', path: 'shell/on-start.sh', run: 'always'
 end
