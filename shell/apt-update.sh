@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Updating libraries..."
-apt-get update
+sudo apt-get update

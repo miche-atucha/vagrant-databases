@@ -27,6 +27,7 @@ Vagrant.configure('2') do |config|
   config.vm.provision 'shell', path: 'shell/mongodb-installation.sh'
   config.vm.provision 'shell', path: 'shell/redis-installation.sh'
   config.vm.provision 'shell', path: 'shell/mysql-installation.sh'
+  config.vm.provision 'shell', path: 'shell/postgres-installation.sh'
 
   config.vm.provision 'shell', path: 'shell/on-start.sh', run: 'always'
 end
