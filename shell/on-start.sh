@@ -20,9 +20,16 @@ systemctl status mysql.service
 
 echo " "
 echo "===================================================="
+echo "Testing Postgres..."
+echo " "
+systemctl status postgresql
+
+echo " "
+echo "===================================================="
 echo "Listening on IP: 1.1.1.10"
 echo "MongoDB at PORT: 27017"
 echo "Redis at PORT: 6379"
 echo "MySQL at PORT: 3306"
+echo "Postgres at PORT: 5432"
 echo "===================================================="
 echo " "
